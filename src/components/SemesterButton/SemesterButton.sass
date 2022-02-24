@@ -1,0 +1,41 @@
+@import "../../styles/_variables"
+
+.semester-button
+  border: 1px solid $light-background
+  border-radius: 0.25rem
+  color: white
+  font-size: 0.875rem
+  padding: 0.45rem 0.6rem
+  font-family: "Roboto Condensed Regular", sans-serif
+  width: fit-content
+  transition: 0.3s ease all
+  &:hover
+    transition: 0.3s ease all
+    cursor: pointer
+
+.semester-button__active-semester
+  background-color: #007BFF
+  border: 1px solid #007BFF
+  &:hover
+    background-color: #006CF0
+    border: 1px solid #006CF0
+.semester-button__inactive-semester
+  background-color: #6C757D
+  border: 1px solid #6C757D
+  &:hover
+    background-color: #5D666E
+    border: 1px solid #5D666E
+.semester-button__inactive-degree
+  color: $gray
+  background-color: transparent
+  border: 1px solid #28A745
+  &:hover
+    color: white
+    background-color: #28A745
+    border: 1px solid #28A745
+.semester-button__active-degree
+  background-color: #28A745
+  border: 1px solid #28A745
+  &:hover
+    background-color: #199836
+    border: 1px solid #199836

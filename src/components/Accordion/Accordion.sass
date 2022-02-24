@@ -1,0 +1,51 @@
+@import "../../styles/_variables"
+
+.accordion
+  width: 100%
+  .accordion-outer
+    display: flex
+    justify-content: space-between
+    font-family: "Roboto Condensed Bold", sans-serif
+    background-color: white
+    border-radius: 4px
+    padding: 1rem 2rem
+    box-shadow: 0 14.8px 15px rgba(0, 0, 0, 0.005), 0 13.5px 14.2px rgba(0, 0, 0, 0.022), 0 11.4px 12px rgba(0, 0, 0, 0.05)
+    &:hover
+      cursor: pointer
+    div
+      display: flex
+      align-items: center
+    div div
+      transition: 0.3s transform ease
+      transform: rotate(0deg)
+  .accordion-outer__active
+    border-radius: 4px 4px 0 0
+    div div
+      transition: 0.3s transform ease
+      transform: rotate(-90deg)
+  .accordion-inner
+    transition: max-height 0.4s ease
+    display: flex
+    text-align: justify
+    font-family: "Roboto Condensed Light", sans-serif
+    flex-direction: column
+    border-radius: 0 0 4px 4px
+    background-color: white
+    box-shadow: 0 14.8px 15px rgba(0, 0, 0, 0.005), 0 13.5px 14.2px rgba(0, 0, 0, 0.022), 0 11.4px 12px rgba(0, 0, 0, 0.05)
+    .accordion-inner__content
+      visibility: hidden
+      opacity: 0
+      transition: opacity 0.3s
+      div
+        margin-bottom: 0.5rem
+    &:last-child
+      margin-bottom: 0
+  &:hover
+    transition: 0.3s all ease
+    box-shadow: 0 14.8px 15px rgba(0, 0, 0, 0.01), 0 13.5px 14.2px rgba(0, 0, 0, 0.042), 0 11.4px 12px rgba(0, 0, 0, 0.1)
+  .accordion-inner__active
+    padding: 1rem 2rem
+    .accordion-inner__content
+      visibility: visible
+      opacity: 1
+      transition: opacity 1s

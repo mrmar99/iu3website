@@ -1,0 +1,33 @@
+@import "../styles/_variables"
+
+.discipline
+  display: flex
+  flex-direction: column
+  .discipline__title
+    display: flex
+    justify-content: center
+    font-size: 3rem
+    font-family: "Roboto Condensed Bold", sans-serif
+  .discipline__semester
+    display: flex
+    justify-content: center
+    font-size: 1.125rem
+    font-family: "Roboto Condensed Light", sans-serif
+  .discipline-content
+    margin-top: 1rem
+    font-size: 1.25rem
+    .discipline-content__block
+      margin-top: 1.5rem
+      .discipline-content__title
+        font-family: "Roboto Condensed Bold", sans-serif
+      .discipline-content__text
+        font-family: "Roboto Condensed Light", sans-serif
+      .discipline__credit-units__num
+        color: $light-red
+        font-family: "Roboto Condensed Bold", sans-serif
+      &:first-child
+        margin-top: 0
+    .discipline__credit-units__addition
+      font-size: 0.825rem
+      font-family: "Roboto Condensed Light", sans-serif
+      color: $light-red
